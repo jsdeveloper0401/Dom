@@ -1,15 +1,18 @@
-$(document).ready(function () {
-    $(".password-toggle").click(function () {
-        const passwordInput = $("#password");
-        const icon = $("#eye-icon");
-        if (passwordInput.attr("type") === "password") {
-            passwordInput.attr("type", "text");
-            icon.addClass("fa-eye-slash");
-            icon.removeClass("fa-eye");
-        } else {
-            passwordInput.attr("type", "password");
-            icon.addClass("fa-eye");
-            icon.removeClass("fa-eye-slash");
-        }
-    });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document
+        .querySelector(".password-toggle")
+        .addEventListener("click", function () {
+            const passwordInput = document.getElementById("password");
+            const icon = document.getElementById("eye-icon");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            } else {
+                passwordInput.type = "password";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            }
+        });
 });

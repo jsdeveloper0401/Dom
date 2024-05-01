@@ -19,6 +19,11 @@
                 margin: 20px;
                 list-style-type: none;
             }
+
+            .small {
+                font-weight: 500;
+                font-size: 20px;
+            }
         </style>
         <ul>
             <li><a href="./index.html">Home</a></li>
@@ -27,15 +32,15 @@
         </ul>
         <div class="container mt-4">
             <div class="form-group">
-                <label for="area" class="fw-500">Textarea</label>
+                <label for="area" class="fw-500 small">Textarea</label>
                 <textarea
                     class="form-control mb-4"
                     id="area"
                     rows="3"></textarea>
-                <small id="wordCount" class="form-text text-muted"
+                <small id="wordCount" class="form-text text-muted small"
                     >0 words</small
                 >
-                <small id="letterCount" class="form-text text-muted"
+                <small id="letterCount" class="form-text text-muted small"
                     >0 letters</small
                 >
             </div>
