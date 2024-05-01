@@ -10,27 +10,49 @@
         <title>Input values</title>
     </head>
     <body>
-      <style>
-        body{
-          background:rgba(8, 243, 243, 0.545);
-          padding-top: 50px;
-        }
-      </style>
+        <style>
+            body {
+                background: rgb(72, 242, 199);
+            }
+            ul {
+                display: flex;
+                gap: 30px;
+                margin: 20px;
+                list-style-type: none;
+            }
+        </style>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./script.html">div</a></li>
+            <li><a href="./textarea.html">Textarea</a></li>
+        </ul>
         <div class="container">
             <div class="row gap-4">
                 <div class="col-md-6">
-                  <form onsubmit="create(event)">
-                    <input type="text" placeholder="width" class="form-control my-2">
-                    <input type="text" placeholder="height" class="form-control my-2">
-                    <input type="text" placeholder="bg-color" class="form-control my-2">
-                    <input type="text" placeholder="border radius" class="form-control my-2">
-                    <button type="submit" class="btn btn-primary">create</button>
-                  </form>
+                    <form onsubmit="create(event)">
+                        <input
+                            type="text"
+                            placeholder="width"
+                            class="form-control my-2" />
+                        <input
+                            type="text"
+                            placeholder="height"
+                            class="form-control my-2" />
+                        <input
+                            type="text"
+                            placeholder="bg-color"
+                            class="form-control my-2" />
+                        <input
+                            type="text"
+                            placeholder="border radius"
+                            class="form-control my-2" />
+                        <button type="submit" class="btn btn-primary">
+                            create
+                        </button>
+                    </form>
                 </div>
                 <div class="col-md-6">
-                  <div id="result">
-
-                  </div>
+                    <div id="result"></div>
                 </div>
             </div>
         </div>

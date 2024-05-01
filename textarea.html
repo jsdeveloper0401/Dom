@@ -9,17 +9,35 @@
         <title>Textarea</title>
     </head>
     <body>
-      <style>
-        body{
-          background: rgb(72, 242, 199);
-        }
-      </style>
+        <style>
+            body {
+                background: rgb(72, 242, 199);
+            }
+            ul {
+                display: flex;
+                gap: 30px;
+                margin: 20px;
+                list-style-type: none;
+            }
+        </style>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./script.html">div</a></li>
+            <li><a href="./textarea.html">Textarea</a></li>
+        </ul>
         <div class="container mt-4">
             <div class="form-group">
                 <label for="area" class="fw-500">Textarea</label>
-                <textarea class="form-control mb-4" id="area" rows="3"></textarea>
-                <small id="wordCount" class="form-text text-muted">0 words</small>
-                <small id="letterCount" class="form-text text-muted">0 letters</small>
+                <textarea
+                    class="form-control mb-4"
+                    id="area"
+                    rows="3"></textarea>
+                <small id="wordCount" class="form-text text-muted"
+                    >0 words</small
+                >
+                <small id="letterCount" class="form-text text-muted"
+                    >0 letters</small
+                >
             </div>
         </div>
 
