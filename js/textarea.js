@@ -1,7 +1,8 @@
-
 const area = document.getElementById("area");
 const wordCount = document.getElementById("wordCount");
 const letterCount = document.getElementById("letterCount");
+const input = document.querySelector(".input")
+
 
 area.addEventListener("input", function () {
     const text = this.value.trim();
@@ -20,3 +21,4 @@ function countWords(text) {
 function countLetters(text) {
     return text.replace(/\s+/g, "").length;
 }
+
