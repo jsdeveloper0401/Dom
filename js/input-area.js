@@ -1,6 +1,7 @@
 const area = document.getElementById("area");
 const input = document.getElementById("input");
 const result = document.getElementById("result");
+const result2 = document.getElementById("result2");
 const file = document.getElementById("file");
 const textinput = document.getElementById("text");
 
@@ -41,7 +42,8 @@ textinput.addEventListener("change", (e) => {
     }
 
     const equal = left === right ? "teng" : "teng emas";
-    console.log("Left (:", left);
-    console.log("Right ):", right);
-    console.log("Skobkalar soni:", equal);
+    result2.textContent = `
+     Left (: ${left} ta
+     Right ): ${right} ta
+     Skobkalar soni: ${equal}`;
 });
