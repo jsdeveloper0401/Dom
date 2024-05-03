@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Textarea and Input</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<style>
-  body{
-    background: #ec0964;
-  }
-  .area-container {
-    max-width: 800px;
-    margin: auto;
-  }
-  #result, #result2{
-    padding: 20px 10px;
-    border-radius: 5px;
-    width: 100%;
-    height: auto;
-    font-size: 18px;
-    background: #fff;
-  }
-</style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Textarea and Input</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <style>
+            body {
+                background: #ec0964;
+            }
+            .area-container {
+                max-width: 800px;
+                margin: auto;
+            }
+            #result,
+            #result2 {
+                padding: 20px 10px;
+                border-radius: 5px;
+                width: 100%;
+                height: auto;
+                font-size: 18px;
+                background: #fff;
+            }
+            ul {
+                display: flex;
+                gap: 30px;
+                margin: 20px;
+                list-style-type: none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./script.html">div</a></li>
+            <li><a href="./textarea.html">Textarea</a></li>
+            <li><a href="./input-area.html">Input-Area</a></li>
+        </ul>
+        <div class="container mt-5">
+            <div class="area-container">
+                <button class="btn btn-primary my-2 mt-5">Task 1</button>
 
-<div class="container mt-5">
-  <div class="area-container">
-    <button class="btn btn-primary my-2 mt-5">Task 1</button>
+                <textarea
+                    id="area"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Enter text"></textarea
+                ><br />
+                <input
+                    type="text"
+                    id="input"
+                    class="form-control my-3"
+                    placeholder="Enter a word" />
+                <div id="result" class="mt-3"></div>
 
-    <textarea id="area" class="form-control" rows="4" placeholder="Enter text"></textarea><br>
-    <input type="text" id="input" class="form-control my-3" placeholder="Enter a word">
-    <div id="result" class="mt-3"></div>
-    
-    <button class="btn btn-primary my-2 mt-5">Task 2</button>
-      <input type="file" id="file" class="form-control my-3">
+                <button class="btn btn-primary my-2 mt-5">Task 2</button>
+                <input type="file" id="file" class="form-control my-3" />
 
-    <button class="btn btn-primary my-2 mt-2">Task 3</button>
-      <input type="text" id="text" class="form-control my-3">
-      <div id="result2" class="mt-3"></div>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <button class="btn btn-primary my-2 mt-2">Task 3</button>
+                <input type="text" id="text" class="form-control my-3" />
+                <div id="result2" class="mt-3"></div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<script src="./js/input-area.js"></script>
-</body>
+        <script src="./js/input-area.js"></script>
+    </body>
 </html>
-

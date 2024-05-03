@@ -43,7 +43,7 @@ textinput.addEventListener("change", (e) => {
 
     const equal = left === right ? "teng" : "teng emas";
     result2.textContent = `
-     Left (: ${left} ta
-     Right ): ${right} ta
+     Left (: ${left} ta 
+      Right ): ${right} ta 
      Skobkalar soni: ${equal}`;
 });
