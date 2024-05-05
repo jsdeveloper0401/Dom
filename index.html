@@ -7,6 +7,9 @@
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
         <!-- Font Awesome -->
         <link
             rel="stylesheet"
@@ -15,56 +18,144 @@
         <title>Login Page</title>
     </head>
     <body>
-          <style>
-        body{
-          background: rgb(72, 242, 199);
-        }
-        ul{
-            display: flex;
-            gap: 30px;
-            margin: 20px;
-            list-style-type: none;
-        }
-      </style>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./script.html">div</a></li>
-            <li><a href="./textarea.html">Textarea</a></li>
-            <li><a href="./input-area.html">Input-Area</a></li>
-        </ul>
-        <div class="container">
-            <div class="login-container">
-                <h2 class="text-center mb-4">Login</h2>
-                <form class="form">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="username"
-                            placeholder="Enter username" />
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="#"> Logo </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse justify-content-end"
+                        id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./script.html">div</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./textarea.html"
+                                    >Textarea</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./input-area.html"
+                                    >Input-Area</a
+                                >
+                            </li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <div class="input-group">
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="login-container">
+                    <h2 class="text-center mb-4">Login</h2>
+                    <form class="form" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="username">Username</label>
                             <input
-                                type="password"
+                                required
+                                type="text"
                                 class="form-control"
-                                id="password"
-                                placeholder="Enter password" />
-                            <div class="input-group-append">
-                                <span class="input-group-text password-toggle">
-                                    <i id="eye-icon" class="fas fa-eye"></i>
-                                </span>
+                                id="username"
+                                name="username"
+                                placeholder="Enter username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-group">
+                                <input
+                                    required
+                                    type="password"
+                                    class="form-control"
+                                    id="password"
+                                    pattern=".{6,}"
+                                    title="Password must be at least 6 characters long"
+                                    onkeyup="change()"
+                                    placeholder="Enter password" />
+                                <div class="input-group-append">
+                                    <span
+                                        class="input-group-text password-toggle">
+                                        <i
+                                            class="bi bi-eye-slash"
+                                            id="toggle-password"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="result"></p>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Login
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="table-container container">
+                <div class="row mt-4">
+                    <div class="col-lg-8">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">T/R</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Address</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <form onsubmit="handleSubmit(event)" id="form">
+                                    <input
+                                        type="text"
+                                        placeholder="Enter Your Name"
+                                        class="form-control my-2" />
+                                    <input
+                                        type="number"
+                                        placeholder="Age"
+                                        class="form-control my-2" />
+                                    <input
+                                        type="tel"
+                                        value="+998"
+                                        name="phone"
+                                        title="^\+998(91|7(0|1|7)|88|9\d{1})(\d{7})"
+                                        placeholder="Enter Phone Number"
+                                        class="form-control my-2" />
+                                    <input
+                                        type="text"
+                                        placeholder="Address"
+                                        class="form-control my-2" />
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button
+                                    type="submit"
+                                    form="form"
+                                    class="btn btn-success">
+                                    Add user
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">
-                        Login
-                    </button>
-                </form>
+                </div>
             </div>
-        </div>
+        </main>
 
         <!-- Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

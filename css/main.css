@@ -10,6 +10,59 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 100px;
 }
+.table-container {
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
 .password-toggle {
     cursor: pointer;
+}
+body {
+    background: rgb(72, 242, 199);
+    font-size: 20px;
+}
+ul {
+    display: flex;
+    gap: 30px;
+    margin: 20px;
+    list-style-type: none;
+}
+
+.red {
+    color: red;
+}
+.pink {
+    color: pink;
+}
+.orange {
+    color: orange;
+}
+.success {
+    color: rgb(5, 217, 5);
+}
+
+header {
+    background-color: transparent;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+header.navbar-shrink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #222;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
 }
