@@ -10,7 +10,7 @@ togglePassword.addEventListener("click", function () {
 });
 
 const change = () => {
-    const text = document.getElementById("password").value;
+    const text = password.value;
     const result = document.getElementById("result");
     const classes = ["red", "pink", "orange", "success"];
 
@@ -27,7 +27,6 @@ const change = () => {
         result.innerText = "Strong!";
         result.className = "success";
     }
-    console.log(text);
 };
 
 function validateForm() {
@@ -87,4 +86,3 @@ const handleSubmit = (e) => {
         document.getElementById("tbody").innerHTML = tableRows;
     }
 };
-
