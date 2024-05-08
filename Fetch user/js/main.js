@@ -27,3 +27,4 @@ const createTable = async () => {
     });
 };
 createTable();
+console.log(users);
