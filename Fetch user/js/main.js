@@ -25,6 +25,6 @@ const createTable = async () => {
           <td>${user.company.name}</td>
         `;
     });
+    console.log(users);
 };
 createTable();
-console.log(users);
