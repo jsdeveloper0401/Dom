@@ -43,6 +43,8 @@ function validateForm() {
     return true;
 }
 
+
+
 let users = [];
 let userNumber = 0;
 
@@ -86,3 +88,4 @@ const handleSubmit = (e) => {
         document.getElementById("tbody").innerHTML = tableRows;
     }
 };
+
